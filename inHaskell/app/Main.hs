@@ -5,5 +5,6 @@ import System.Environment
 
 main :: IO ()
 main = do
-    args <- getArgs
-    putStrLn ("Hello, " <> args !! 0)
+    putStr ("Enter your shite : ")
+    myShite <- getLine
+    putStrLn ("This is your shite : " <> myShite)
