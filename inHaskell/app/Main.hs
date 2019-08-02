@@ -6,5 +6,11 @@ import System.Environment
 main :: IO ()
 main = do
     args <- getArgs
-    putStrLn ("Hello, " <> args !! 0)
-    putStrLn ("Hello, " <> args !! 1)
+    let
+        simpleArithmetic :: Int
+        simpleArithmetic = (+) x y where
+            x            = readVal $ args !! 0
+            y            = readVal $ args !! 1
+            readVal :: String -> Int
+            readVal = read
+    putStrLn $ show simpleArithmetic
